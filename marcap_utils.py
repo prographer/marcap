@@ -25,7 +25,7 @@ def marcap_data(start, end=None, code=None):
     
   for year in range(start.year, end.year + 1):
     try:
-      csv_file = 'marcap/data/marcap-%s.csv.gz' % (year)
+      csv_file = 'data/marcap-%s.csv.gz' % (year)
       df = pd.read_csv(csv_file, dtype=dtypes, parse_dates=['Date'])
       df_list.append(df)
     except Exception as e:
